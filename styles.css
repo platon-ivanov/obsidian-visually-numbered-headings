@@ -6,3 +6,86 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+:root {
+	/* Other values */
+	/* --h1: h1;
+	--h2: h2;
+	--h3: h3;
+	--h4: h4;
+	--h5: h5;
+	--h6: h6; */
+}
+
+/* ! Styling here! */
+:where(.cm-header, h1, h2, h3, h4, h5, h6)::before {
+	--h1: attr(data-level-1);
+	--h2: attr(data-level-2);
+	--h3: attr(data-level-3);
+	--h4: attr(data-level-4);
+	--h5: attr(data-level-5);
+	--h6: attr(data-level-6);
+
+	/* ? Changes the number each heading starts counting from, 0 means 1, -1 means 0, ... */
+	--h1-num: ;
+	--initial: 0;
+
+	/* ? Changes the symbol between the numbers. (Keep the quotation marks!) */
+	--delim: ".";
+
+	/* ? Delete the heading *value* (right side) if you don't want to count it */
+	/* ? For example, if you want to skip Heading 1, keep only this: */
+	--h1-num: var(--h1) var(--delim);
+	--h2-num: var(--h1-num) var(--h2) var(--delim);
+	--h3-num: var(--h2-num) var(--h3) var(--delim);
+	--h4-num: var(--h3-num) var(--h4) var(--delim);
+	--h5-num: var(--h4-num) var(--h5) var(--delim);
+	--h6-num: var(--h5-num) var(--h6) var(--delim);
+
+	position: absolute;
+	transform: translateX(calc(-100% - 0.7rem));
+	opacity: 0.5;
+}
+
+/* .cm-editor {
+	counter-reset: var(--h1) var(--h2) var(--h3) var(--h4) var(--h5) var(--h6);
+} */
+
+.cm-header-1::before,
+h1::before {
+	content: var(--h1-num);
+}
+
+.cm-header-2::before,
+h2::before {
+	content: var(--h2-num);
+}
+
+.cm-header-3::before,
+h3::before {
+	content: var(--h3-num);
+}
+
+.cm-header-4::before,
+h4::before {
+	content: var(--h4-num);
+}
+
+.cm-header-5::before,
+h5::before {
+	content: var(--h5-num);
+}
+
+.cm-header-6::before,
+h6::before {
+	content: var(--h6-num);
+}
+
+/* ? Selectors to prevent double heading from showing up when editing a line */
+.cm-formatting-header::before {
+	display: none;
+}
+
+.cm-formatting-header ~ .cm-header::before {
+	opacity: 0;
+}
