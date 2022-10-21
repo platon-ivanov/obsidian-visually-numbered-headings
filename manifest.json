@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-sample-plugin",
-	"name": "Heading Numbers",
-	"version": "1.0.0",
+	"name": "Numbered Headings",
+	"version": "1.1.0",
 	"minAppVersion": "1.0.0",
 	"description": "Heading numbering for Obsidian",
 	"author": "Platon Ivanov",
