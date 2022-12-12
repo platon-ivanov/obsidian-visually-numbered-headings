@@ -79,8 +79,8 @@ export default class CountPlugin extends Plugin {
 
 	async updateSettings(settings: Partial<CountPluginSettings>) {
 		Object.assign(this.settings, settings);
-		this.updateRefreshSettings();
 		await this.saveData(this.settings);
+		this.updateRefreshSettings();
 	}
 
 	private updateRefreshSettings() {

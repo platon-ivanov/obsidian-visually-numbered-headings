@@ -23,6 +23,8 @@ export class NumberGenerator {
 			lvl
 		);
 
+		this.prevLvl = lvl;
+
 		return (
 			newArr.join(this.plugin.settings.joinSymbol) +
 			(newArr.length !== 0 ? this.plugin.settings.endSymbol : "")
@@ -46,6 +48,8 @@ export class NumberGenerator {
 		for (const [i, prevLvl] of newArr.entries()) {
 			res[i] = prevLvl;
 		}
+
+		console.log(res);
 
 		this.arr = res;
 	}
