@@ -12,6 +12,7 @@
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
+		"@lezer/common": "^1.0.2",
 		"@types/codemirror": "^5.60.5",
 		"@types/node": "^16.11.6",
 		"@types/react": "^18.0.21",
