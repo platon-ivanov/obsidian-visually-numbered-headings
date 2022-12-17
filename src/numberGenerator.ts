@@ -49,8 +49,6 @@ export class NumberGenerator {
 			res[i] = prevLvl;
 		}
 
-		console.log(res);
-
 		this.arr = res;
 	}
 }

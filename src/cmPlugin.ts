@@ -48,6 +48,7 @@ export function headingCountPlugin(plugin: CountPlugin) {
 			buildDecorations(view: EditorView): DecorationSet {
 				const builder = new RangeSetBuilder<Decoration>();
 				const numGen = new NumberGenerator(plugin);
+				console.log(view);
 
 				syntaxTree(view.state).iterate({
 					enter(node) {
@@ -82,6 +83,13 @@ export function cmPlugin(plugin: CountPlugin): Extension {
 		".custom-heading-count": {
 			opacity: 0.5,
 		},
+		// ".tree-item-children": {
+		// 	"counter-reset": "multi-counters",
+		// },
+		// ".tree-item-inner::before": {
+		// 	"counter-increment": "multi-counters",
+		// 	content: `counters(multi-counters, "${plugin.settings.joinSymbol}") "${plugin.settings.endSymbol} "`,
+		// },
 	});
 
 	return [baseTheme, headingCountPlugin(plugin)];
