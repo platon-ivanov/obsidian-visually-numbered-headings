@@ -6,7 +6,10 @@
 	counter-reset: multi-counters;
 }
 
-.tree-item-inner::before {
+.tree-item {
 	counter-increment: multi-counters;
+}
+
+.tree-item-inner::before {
 	content: counters(multi-counters, ".") ". ";
 }
