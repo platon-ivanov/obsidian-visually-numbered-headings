@@ -1,4 +1,4 @@
-# Obsidian Heading counter
+# Visual heading numbering for Obsidian
 
 This plugin adds heading numeration to your Obsidian view.
 
@@ -19,7 +19,7 @@ The plugin is not yet available in Obsidian community plugin list, so it has to 
 
 ### From GitHub
 
-1. **Download** the [latest release](https://github.com/platon-ivanov/obsidian-heading-counter/releases/latest)
+1. **Download** the [latest release](https://github.com/platon-ivanov/obsidian-visual-numbered-headings/releases/latest)
 2. **Extract** the whole `obsidian-heading-count-plugin` folder from the zip to your vault's plugins folder: `<vault>/.obsidian/plugins/`
     > **Note**: On some machines the `.obsidian` folder may be hidden by default.
 3. **Reload** Obsidian
