@@ -1,6 +1,6 @@
 # Visual heading numbering for Obsidian
 
-This plugin adds heading numeration to your Obsidian view.
+This plugin adds heading numeration to your Obsidian views.
 
 It adds the headings only **visually** and _doesn't modify your files_! 🎉
 
