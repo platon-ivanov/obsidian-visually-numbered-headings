@@ -8,6 +8,11 @@ It adds the headings only **visually** and _doesn't modify your files_! 🎉
 
 ![Screenshot of headings with added numbers](imgs/screenshot.png)
 
+It also works in the ouline pane:
+
+![image](https://user-images.githubusercontent.com/100810261/208636544-34256930-f36a-4539-9582-398588e281dd.png)
+
+
 ## Installation
 
 The plugin is not yet available in Obsidian community plugin list, so it has to be installed manually for now.
