@@ -48,7 +48,6 @@ export function headingCountPlugin(plugin: CountPlugin) {
 			buildDecorations(view: EditorView): DecorationSet {
 				const builder = new RangeSetBuilder<Decoration>();
 				const numGen = new NumberGenerator(plugin);
-				console.log(view);
 
 				syntaxTree(view.state).iterate({
 					enter(node) {
