@@ -2,14 +2,24 @@
 	opacity: 0.5;
 }
 
-.tree-item-children {
+.outline .tree-item-children {
 	counter-reset: multi-counters;
 }
 
-.tree-item {
+.outline .tree-item {
 	counter-increment: multi-counters;
 }
 
-.tree-item-inner::before {
+.outline .tree-item-inner::before {
 	content: counters(multi-counters, ".") ". ";
+}
+
+/* Fix for vertical alignment of headings without children */
+
+.outline .tree-item-inner {
+	padding-left: var(--size-4-3);
+}
+
+.outline .tree-item-icon {
+	position: absolute;
 }
